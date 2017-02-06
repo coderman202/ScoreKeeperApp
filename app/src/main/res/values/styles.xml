@@ -1,0 +1,110 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <!--Style for the main parent layout-->
+    <style name="RelLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/backgroundColor</item>
+
+    </style>
+
+    <!--Style for the nested LinearLayout within the ScrollView-->
+    <style name="LinLayoutHor">
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/activity_margin</item>
+    </style>
+
+    <!--Style for the vertical LinearLayouts which hold the team names, scores and buttons-->
+    <style name="LinLayoutVer">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/activity_margin</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!--ScrollView style including setting the background of the NBA logo-->
+    <style name="Scroller">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@id/reset</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:background">@drawable/nbalogo</item>
+
+    </style>
+
+    <!--Main TextView style which is a parent of all other text view styles.
+    Principle stile for the team names.
+    Trying to set a text shadow, currently not working.-->
+    <style name="TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/text_margin</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:shadowColor">@color/textShadowColor</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--Style for the team scores, using the drawable border file as background.-->
+    <style name="ScoreView" parent="TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:padding">@dimen/score_padding</item>
+        <item name="android:background">@drawable/border</item>
+        <item name="android:textSize">@dimen/score_size</item>
+    </style>
+
+    <!--For the title, indicating which sport you are tracking the scores in.-->
+    <style name="Title" parent="TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">50dp</item>
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:textColor">@color/titleColor</item>
+    </style>
+
+    <!--Style for the scoring buttons, using drawable roundedbutton file for rounded button.-->
+    <style name="Button" parent="TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/buttonTextColor</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:layout_margin">@dimen/button_margin</item>
+        <item name="android:background">@drawable/roundedbutton</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <!--Style for the little round reset button, using roundbutton drawable.-->
+    <style name="Icon">
+        <item name="android:background">@drawable/roundbutton</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_toRightOf">@id/heading</item>
+        <item name="android:padding">@dimen/icon_padding</item>
+        <item name="android:layout_marginTop">@dimen/icon_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/icon_margin_left</item>
+    </style>
+
+    <style name="Grid">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+    </style>
+
+</resources>

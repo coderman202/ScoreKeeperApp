@@ -1,0 +1,25 @@
+<resources>
+    <!-- Main Layout Margins. -->
+    <dimen name="activity_margin">16dp</dimen>
+
+    <!--TextView dimens-->
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="text_margin">2dp</dimen>
+    <dimen name="title_size">20sp</dimen>
+    <dimen name="score_padding">5dp</dimen>
+    <dimen name="score_size">25sp</dimen>
+
+    <!--Button dimens-->
+    <dimen name="button_text_size">12sp</dimen>
+    <dimen name="button_padding">8dp</dimen>
+    <dimen name="button_margin">16dp</dimen>
+
+    <!--Icon dimens-->
+    <dimen name="icon_padding">5dp</dimen>
+    <dimen name="icon_margin_top">5dp</dimen>
+    <dimen name="icon_margin_left">25dp</dimen>
+
+    <!--Line dimens-->
+    <dimen name="line_width">1dp</dimen>
+
+</resources>
