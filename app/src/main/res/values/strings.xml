@@ -3,9 +3,8 @@
 
     <string name="title">Basketball Score Keeper</string>
 
-    <!--Team Names-->
-    <string name="team_a">Team A</string>
-    <string name="team_b">Team B</string>
+    <!--Select Team Names-->
+    <string name="select">Select Team</string>
 
     <!--Button Values-->
     <string name="three_pointer">+3 Pointer</string>
@@ -13,6 +12,5 @@
     <string name="free_throw">Free Throw</string>
 
     <string name="reset">Reset Game</string>
-
 
 </resources>

@@ -69,6 +69,7 @@
         <item name="android:padding">@dimen/score_padding</item>
         <item name="android:background">@drawable/border</item>
         <item name="android:textSize">@dimen/score_size</item>
+        <item name="android:layout_marginLeft">@dimen/score_margin_left</item>
     </style>
 
     <!--For the title, indicating which sport you are tracking the scores in.-->
@@ -101,10 +102,17 @@
         <item name="android:layout_marginLeft">@dimen/icon_margin_left</item>
     </style>
 
-    <style name="Grid">
-        <item name="android:layout_width">60dp</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="Logo">
+        <item name="android:layout_width">@dimen/logo_length</item>
+        <item name="android:layout_height">@dimen/logo_length</item>
         <item name="android:layout_gravity">left</item>
+    </style>
+
+    <style name="Spinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:layout_marginRight">@dimen/logo_margin_right</item>
     </style>
 
 </resources>

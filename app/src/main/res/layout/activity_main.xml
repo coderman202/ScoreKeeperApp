@@ -25,20 +25,20 @@
 
             <LinearLayout style="@style/LinLayoutVer"
                 android:id="@+id/TeamA"
-                android:gravity="left">
+                android:gravity="start">
 
-                <TextView style="@style/TextView"
-                    android:id="@+id/team_a"
-                    android:text="@string/team_a"/>
+                <Spinner style="@style/Spinner"
+                    android:id="@+id/selector_a">
+                </Spinner>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <GridView style="@style/Grid"
-                        android:id="@+id/selector_a">
-                    </GridView>
+                    <ImageView style="@style/Logo"
+                        android:id="@+id/logo_a">
+                    </ImageView>
 
                     <TextView style="@style/ScoreView"
                         android:id="@+id/score_a"/>
@@ -68,18 +68,20 @@
             <LinearLayout style="@style/LinLayoutVer"
                 android:id="@+id/TeamB">
 
-                <TextView style="@style/TextView"
-                    android:id="@+id/team_b"
-                    android:text="@string/team_b"/>
+
+
+                <Spinner style="@style/Spinner"
+                    android:id="@+id/selector_b">
+                </Spinner>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <GridView style="@style/Grid"
-                        android:id="@+id/selector_b">
-                    </GridView>
+                    <ImageView style="@style/Logo"
+                        android:id="@+id/logo_b">
+                    </ImageView>
 
                     <TextView style="@style/ScoreView"
                         android:id="@+id/score_b"/>

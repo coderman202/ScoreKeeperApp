@@ -3,10 +3,11 @@ package com.example.android.courtcounter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.GridView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
-
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,10 @@ public class MainActivity extends AppCompatActivity {
     int scoreA = 0;
     int scoreB = 0;
     TextView scoreViewA, scoreViewB;
-    TextView teamA, teamB;
+
+
+    //Initialise ImageViews to display selected team's logo
+    ImageView logoA, logoB;
 
     //States for recalling scores on restore
     static final String STATE_SCORE_A = "ScoreTeamA";
@@ -32,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
             "Utah Jazz", "Washington Wizards"
     };
 
-    //Initialise the gridviews to display all the logos for selection.
-    GridView gridA, gridB;
+    //Initialise the Spinners to display all the teams for selection.
+    Spinner spinnerA, spinnerB;
 
 
 
@@ -50,20 +54,20 @@ public class MainActivity extends AppCompatActivity {
         scoreViewA = (TextView) findViewById(R.id.score_a);
         scoreViewB = (TextView) findViewById(R.id.score_b);
 
-        teamA = (TextView) findViewById(R.id.team_a);
-        teamB = (TextView) findViewById(R.id.team_b);
-
-        teamA.setText(teams[0]);
-        teamB.setText(teams[0]);
+        logoA = (ImageView) findViewById(R.id.logo_a);
+        logoB = (ImageView) findViewById(R.id.logo_b);
 
         displayScore(scoreA, scoreViewA);
         displayScore(scoreB, scoreViewB);
 
-        gridA = (GridView) findViewById(R.id.selector_a);
-        gridB = (GridView) findViewById(R.id.selector_b);
+        spinnerA = (Spinner) findViewById(R.id.selector_a);
+        spinnerB = (Spinner) findViewById(R.id.selector_b);
 
-        gridA.setAdapter(new ImageAdapter(this));
-        gridB.setAdapter(new ImageAdapter(this));
+        addToSpinner(spinnerA, teams);
+        addToSpinner(spinnerB, teams);
+
+        addListenerOnSpinnerItemSelection(spinnerA);
+        addListenerOnSpinnerItemSelection(spinnerB);
 
     }
 
@@ -110,10 +114,51 @@ public class MainActivity extends AppCompatActivity {
         displayScore(scoreB, scoreViewB);
     }
 
-    //Method for creating random numbers to select basketball teams
-    private static int randInt(int min, int max) {
-        Random rand = new Random();
-        int randomNum = rand.nextInt((max - min) + 1) + min;
-        return randomNum;
+    //Add teams to spinners
+    public void addToSpinner(Spinner spin, String[] list) {
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, list);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin.setAdapter(dataAdapter);
     }
+
+    // get the selected dropdown list value
+    public void addListenerOnSpinnerItemSelection(Spinner spin) {
+
+        spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                setTeamLogos();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+                // sometimes you need nothing here
+            }
+
+        });
+    }
+
+    public void setTeamLogos(){
+        logoA.setImageResource(teamLogos[spinnerA.getSelectedItemPosition()]);
+        logoB.setImageResource(teamLogos[spinnerB.getSelectedItemPosition()]);
+    }
+
+    //Array of references to drawable team logos
+    private Integer[] teamLogos = {
+            R.drawable.logo1, R.drawable.logo2, R.drawable.logo3, R.drawable.logo4,
+            R.drawable.logo5, R.drawable.logo6, R.drawable.logo7, R.drawable.logo8,
+            R.drawable.logo9, R.drawable.logo10, R.drawable.logo11, R.drawable.logo12,
+            R.drawable.logo13, R.drawable.logo14, R.drawable.logo15, R.drawable.logo16,
+            R.drawable.logo17, R.drawable.logo18, R.drawable.logo19, R.drawable.logo20,
+            R.drawable.logo21, R.drawable.logo22, R.drawable.logo22, R.drawable.logo24,
+            R.drawable.logo25, R.drawable.logo26, R.drawable.logo27, R.drawable.logo28,
+            R.drawable.logo29, R.drawable.logo30
+    };
+
+
 }

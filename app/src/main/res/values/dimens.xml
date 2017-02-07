@@ -7,7 +7,8 @@
     <dimen name="text_margin">2dp</dimen>
     <dimen name="title_size">20sp</dimen>
     <dimen name="score_padding">5dp</dimen>
-    <dimen name="score_size">25sp</dimen>
+    <dimen name="score_margin_left">8dp</dimen>
+    <dimen name="score_size">35sp</dimen>
 
     <!--Button dimens-->
     <dimen name="button_text_size">12sp</dimen>
@@ -21,5 +22,9 @@
 
     <!--Line dimens-->
     <dimen name="line_width">1dp</dimen>
+
+    <!--Logo dimens-->
+    <dimen name="logo_length">60dp</dimen>
+    <dimen name="logo_margin_right">8dp</dimen>
 
 </resources>
