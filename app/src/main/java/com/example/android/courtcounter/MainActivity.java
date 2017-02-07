@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
     int scoreB = 0;
     TextView scoreViewA, scoreViewB;
 
+    //Lawlers law tracker
+    boolean lawlersLaw = false;
+
 
     //Initialise ImageViews to display selected team's logo
     ImageView logoA, logoB;
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     //States for recalling scores on restore
     static final String STATE_SCORE_A = "ScoreTeamA";
     static final String STATE_SCORE_B = "ScoreTeamB";
+    static final String STATE_LAWLER = "LawlersLaw";
 
     //Initialise an array of NBA teams.
     String teams[] = {
@@ -48,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         if(savedInstanceState != null){
             scoreA = savedInstanceState.getInt(STATE_SCORE_A);
             scoreB = savedInstanceState.getInt(STATE_SCORE_B);
+            lawlersLaw = savedInstanceState.getBoolean(STATE_LAWLER);
+
         }
         setContentView(R.layout.activity_main);
 
@@ -76,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
     public void onSaveInstanceState(Bundle saveState) {
         saveState.putInt(STATE_SCORE_A, scoreA);
         saveState.putInt(STATE_SCORE_B, scoreB);
+        saveState.putBoolean(STATE_LAWLER, lawlersLaw);
         super.onSaveInstanceState(saveState);
     }
 
@@ -84,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(restoreState);
         scoreA = restoreState.getInt(STATE_SCORE_A);
         scoreB = restoreState.getInt(STATE_SCORE_B);
+        lawlersLaw = restoreState.getBoolean(STATE_LAWLER);
         displayScore(scoreA, scoreViewA);
         displayScore(scoreB, scoreViewB);
     }
@@ -92,12 +101,13 @@ public class MainActivity extends AppCompatActivity {
     public void updateScoreA(View btn){
         scoreA+=Integer.parseInt(btn.getTag().toString());
         displayScore(scoreA, scoreViewA);
-
+        checkScoreForLawlersLaw();
     }
 
     public void updateScoreB(View btn){
         scoreB+=Integer.parseInt(btn.getTag().toString());
         displayScore(scoreB, scoreViewB);
+        checkScoreForLawlersLaw();
 
     }
 
@@ -110,8 +120,16 @@ public class MainActivity extends AppCompatActivity {
     public void resetScores(View resetBtn){
         scoreA = 0;
         scoreB = 0;
+        lawlersLaw = false;
         displayScore(scoreA, scoreViewA);
         displayScore(scoreB, scoreViewB);
+    }
+
+    private void checkScoreForLawlersLaw(){
+        if((scoreA >= 100 || scoreB >= 100) && !lawlersLaw){
+            Toast.makeText(MainActivity.this, "Lawler's law, first to 100 wins, that's the law",  Toast.LENGTH_SHORT).show();
+            lawlersLaw = true;
+        }
     }
 
     //Add teams to spinners
@@ -123,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
         spin.setAdapter(dataAdapter);
     }
 
-    // get the selected dropdown list value
+    //Get the selected dropdown list value
     public void addListenerOnSpinnerItemSelection(Spinner spin) {
 
         spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -143,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //Set the logo based on the selected item in the dropdown menu
     public void setTeamLogos(){
         logoA.setImageResource(teamLogos[spinnerA.getSelectedItemPosition()]);
         logoB.setImageResource(teamLogos[spinnerB.getSelectedItemPosition()]);
