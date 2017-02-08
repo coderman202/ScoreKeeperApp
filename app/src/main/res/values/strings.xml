@@ -13,4 +13,8 @@
 
     <string name="reset">Reset Game</string>
 
+    <string name="description">Team Logo</string>
+
+    <string name="reset_descrption">Reset The Scores</string>
+
 </resources>

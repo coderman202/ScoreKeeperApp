@@ -68,7 +68,7 @@
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">@dimen/text_size</item>
         <item name="android:shadowColor">@color/textShadowColor</item>
-        <item name="android:shadowRadius">2</item>
+        <item name="android:shadowRadius">3</item>
         <item name="android:layout_gravity">center</item>
     </style>
 
@@ -79,6 +79,10 @@
         <item name="android:background">@drawable/border</item>
         <item name="android:textSize">@dimen/score_size</item>
         <item name="android:layout_marginLeft">@dimen/score_margin_left</item>
+    </style>
+
+    <style name="ScoreViewLand" parent="ScoreView">
+        <item name="android:background">@drawable/borderwhite</item>
     </style>
 
     <!--For the title, indicating which sport you are tracking the scores in.-->
@@ -124,7 +128,9 @@
     <style name="Logo">
         <item name="android:layout_width">@dimen/logo_length</item>
         <item name="android:layout_height">@dimen/logo_length</item>
+        <item name="android:layout_marginRight">12dp</item>
         <item name="android:layout_gravity">left</item>
+        <item name="android:contentDescription">@string/description</item>
     </style>
 
     <style name="Spinner">

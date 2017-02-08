@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkScoreForLawlersLaw(){
         if((scoreA >= 100 || scoreB >= 100) && !lawlersLaw){
-            Toast.makeText(MainActivity.this, "Lawler's law, first to 100 wins, that's the law",  Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this, "Lawler's law, first to 100 wins, that's the law!",  Toast.LENGTH_SHORT).show();
             lawlersLaw = true;
         }
     }

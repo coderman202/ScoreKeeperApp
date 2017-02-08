@@ -9,11 +9,7 @@
         android:id="@+id/heading"
         android:text="@string/title"/>
 
-    <!--Small round button for resetting the scores-->
-    <ImageButton style="@style/Icon"
-        android:id="@+id/reset"
-        android:src="@drawable/refresh"
-        android:onClick="resetScores"/>
+    <include layout="@layout/reset_button" />
 
     <!--Wrapped in a scrollview to ensure no items are lost of screen in landscape mode-->
     <ScrollView style="@style/Scroller"
@@ -22,116 +18,13 @@
         <!--Nesting horizontal layout which holds but vertical layouts containing team names,
         scores and buttons for adding to the scores-->
         <LinearLayout
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/TeamA"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_gravity="top">
+            <include layout="@layout/team_a_display_land" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <Spinner style="@style/Spinner"
-                        android:id="@+id/selector_a">
-                    </Spinner>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageView style="@style/Logo"
-                            android:id="@+id/logo_a">
-                        </ImageView>
-
-                        <TextView style="@style/ScoreView"
-                            android:id="@+id/score_a"/>
-
-                    </LinearLayout>
-
-
-
-                </LinearLayout>
-
-                <Button style="@style/ButtonLandscape"
-                    android:id="@+id/three_point_a"
-                    android:text="@string/three_pointer"
-                    android:tag="3"
-                    android:onClick="updateScoreA"/>
-
-                <Button style="@style/ButtonLandscape"
-                    android:id="@+id/two_point_a"
-                    android:text="@string/two_pointer"
-                    android:tag="2"
-                    android:onClick="updateScoreA"/>
-
-                <Button style="@style/ButtonLandscape"
-                    android:id="@+id/free_throw_a"
-                    android:text="@string/free_throw"
-                    android:tag="1"
-                    android:onClick="updateScoreA"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/TeamB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="bottom">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <Spinner style="@style/Spinner"
-                        android:id="@+id/selector_b">
-                    </Spinner>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <ImageView style="@style/Logo"
-                            android:id="@+id/logo_b">
-                        </ImageView>
-
-                        <TextView style="@style/ScoreView"
-                            android:id="@+id/score_b"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <Button style="@style/ButtonLandscape"
-                    android:id="@+id/three_point_b"
-                    android:text="@string/three_pointer"
-                    android:tag="3"
-                    android:onClick="updateScoreB"/>
-
-                <Button style="@style/ButtonLandscape"
-                    android:id="@+id/two_point_b"
-                    android:text="@string/two_pointer"
-                    android:tag="2"
-                    android:onClick="updateScoreB"/>
-
-                <Button style="@style/ButtonLandscape"
-                    android:id="@+id/free_throw_b"
-                    android:text="@string/free_throw"
-                    android:tag="1"
-                    android:onClick="updateScoreB"/>
-
-            </LinearLayout>
+            <include layout="@layout/team_b_display_land" />
         </LinearLayout>
 
     </ScrollView>

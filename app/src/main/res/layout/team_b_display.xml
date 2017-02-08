@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/LinLayoutVer"
+    android:id="@+id/TeamB"
+    tools:showIn="@layout/activity_main">
+
+
+    <Spinner
+        style="@style/Spinner"
+        android:id="@+id/selector_b"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/Logo"
+            android:id="@+id/logo_b"/>
+
+        <TextView
+            style="@style/ScoreView"
+            android:id="@+id/score_b" />
+
+    </LinearLayout>
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/three_point_b"
+        android:text="@string/three_pointer"
+        android:tag="3"
+        android:onClick="updateScoreB" />
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/two_point_b"
+        android:text="@string/two_pointer"
+        android:tag="2"
+        android:onClick="updateScoreB" />
+
+    <Button
+        style="@style/Button"
+        android:id="@+id/free_throw_b"
+        android:text="@string/free_throw"
+        android:tag="1"
+        android:onClick="updateScoreB" />
+
+</LinearLayout>
