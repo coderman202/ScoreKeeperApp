@@ -16,7 +16,7 @@
         android:onClick="resetScores"/>
 
     <!--Wrapped in a scrollview to ensure no items are lost of screen in landscape mode-->
-    <ScrollView style="@style/ScrollerLand"
+    <ScrollView style="@style/Scroller"
         android:id="@+id/scroller">
 
         <!--Nesting horizontal layout which holds but vertical layouts containing team names,

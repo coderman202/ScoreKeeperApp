@@ -13,7 +13,7 @@
     <style name="RelLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/backgroundColor</item>
+        <item name="android:background">@drawable/nbalogo2</item>
     </style>
 
     <style name="RelLayoutLand" parent="RelLayout">
@@ -48,15 +48,6 @@
 
     <!--ScrollView style including setting the background of the NBA logo-->
     <style name="Scroller">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_below">@id/reset</item>
-        <item name="android:layout_alignParentBottom">true</item>
-        <item name="android:layout_alignParentLeft">true</item>
-        <item name="android:background">@drawable/nbalogo</item>
-    </style>
-
-    <style name="ScrollerLand">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_below">@id/reset</item>
