@@ -14,11 +14,12 @@
     <dimen name="button_text_size">12sp</dimen>
     <dimen name="button_padding">8dp</dimen>
     <dimen name="button_margin">16dp</dimen>
+    <dimen name="button_margin_land">25dp</dimen>
 
     <!--Icon dimens-->
     <dimen name="icon_padding">5dp</dimen>
     <dimen name="icon_margin_top">5dp</dimen>
-    <dimen name="icon_margin_left">25dp</dimen>
+    <dimen name="icon_margin_right">25dp</dimen>
 
     <!--Line dimens-->
     <dimen name="line_width">1dp</dimen>

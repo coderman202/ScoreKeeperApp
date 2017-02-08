@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinnerA, spinnerB;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -181,3 +180,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
+

@@ -14,7 +14,10 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/backgroundColor</item>
+    </style>
 
+    <style name="RelLayoutLand" parent="RelLayout">
+        <item name="android:background">@drawable/nbalogowood</item>
     </style>
 
     <!--Style for the nested LinearLayout within the ScrollView-->
@@ -24,6 +27,14 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:padding">@dimen/activity_margin</item>
+    </style>
+
+    <style name="HorLayoutLand">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/activity_margin</item>
+
     </style>
 
     <!--Style for the vertical LinearLayouts which hold the team names, scores and buttons-->
@@ -43,7 +54,14 @@
         <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_alignParentLeft">true</item>
         <item name="android:background">@drawable/nbalogo</item>
+    </style>
 
+    <style name="ScrollerLand">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_below">@id/reset</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
     </style>
 
     <!--Main TextView style which is a parent of all other text view styles.
@@ -78,6 +96,11 @@
         <item name="android:paddingLeft">50dp</item>
         <item name="android:textSize">@dimen/title_size</item>
         <item name="android:textColor">@color/titleColor</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+    <style name="TitleLand" parent="Title">
+        <item name="android:layout_centerInParent">true</item>
     </style>
 
     <!--Style for the scoring buttons, using drawable roundedbutton file for rounded button.-->
@@ -90,16 +113,21 @@
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
+    <style name="ButtonLandscape" parent="Button">
+        <item name="android:layout_margin">@dimen/button_margin_land</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
     <!--Style for the little round reset button, using roundbutton drawable.-->
     <style name="Icon">
         <item name="android:background">@drawable/roundbutton</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_alignParentTop">true</item>
-        <item name="android:layout_toRightOf">@id/heading</item>
+        <item name="android:layout_alignParentRight">true</item>
         <item name="android:padding">@dimen/icon_padding</item>
         <item name="android:layout_marginTop">@dimen/icon_margin_top</item>
-        <item name="android:layout_marginLeft">@dimen/icon_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/icon_margin_right</item>
     </style>
 
     <style name="Logo">
