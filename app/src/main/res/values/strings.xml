@@ -3,18 +3,16 @@
 
     <string name="title">Basketball Score Keeper</string>
 
-    <!--Select Team Names-->
-    <string name="select">Select Team</string>
-
     <!--Button Values-->
     <string name="three_pointer">+3 Pointer</string>
     <string name="two_pointer">+2 Pointer</string>
     <string name="free_throw">Free Throw</string>
 
-    <string name="reset">Reset Game</string>
-
-    <string name="description">Team Logo</string>
-
     <string name="reset_descrption">Reset The Scores</string>
+
+    <string name="lawlers_law">Lawler\'s law, first to 100 wins, that\'s the law!</string>
+
+    <!--Content Descriptions for any and all images-->
+    <string name="logo_description">The logo of the selected team.</string>
 
 </resources>

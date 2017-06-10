@@ -13,6 +13,7 @@
     <color name="textColor">@android:color/black</color>
     <color name="titleColor">@android:color/white</color>
     <color name="textShadowColor">@android:color/white</color>
+    
 
 
 </resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><!--Small round button for resetting the scores-->
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Icon"
+    android:id="@+id/reset"
+    android:src="@drawable/refresh"
+    android:onClick="resetScores"
+    android:contentDescription="@string/reset_descrption"
+    tools:showIn="@layout/activity_main" />

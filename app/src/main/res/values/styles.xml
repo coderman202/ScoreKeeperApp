@@ -9,7 +9,7 @@
 
     </style>
 
-    <!--Style for the main parent layout-->
+    <!--Style for the main parent layout in portrait and landscape.-->
     <style name="RelLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -29,12 +29,8 @@
         <item name="android:padding">@dimen/activity_margin</item>
     </style>
 
-    <style name="HorLayoutLand">
-        <item name="android:orientation">horizontal</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:padding">@dimen/activity_margin</item>
-
+    <style name="HorLayoutLand" parent="LinLayoutHor">
+        <item name="android:layout_alignParentTop">false</item>
     </style>
 
     <!--Style for the vertical LinearLayouts which hold the team names, scores and buttons-->
@@ -64,8 +60,9 @@
         <item name="android:layout_margin">@dimen/text_margin</item>
         <item name="android:textColor">@color/textColor</item>
         <item name="android:fontFamily">sans-serif</item>
+        <item name="android:typeface">serif</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/text_size</item>
         <item name="android:shadowColor">@color/textShadowColor</item>
         <item name="android:shadowRadius">3</item>
@@ -74,11 +71,11 @@
 
     <!--Style for the team scores, using the drawable border file as background.-->
     <style name="ScoreView" parent="TextView">
-        <item name="android:layout_width">wrap_content</item>
         <item name="android:padding">@dimen/score_padding</item>
         <item name="android:background">@drawable/border</item>
         <item name="android:textSize">@dimen/score_size</item>
         <item name="android:layout_marginLeft">@dimen/score_margin_left</item>
+        <item name="android:textColor">@color/buttonTextColor</item>
     </style>
 
     <style name="ScoreViewLand" parent="ScoreView">
@@ -87,8 +84,7 @@
 
     <!--For the title, indicating which sport you are tracking the scores in.-->
     <style name="Title" parent="TextView">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:paddingLeft">50dp</item>
+        <item name="android:paddingLeft">@dimen/title_padding_left</item>
         <item name="android:textSize">@dimen/title_size</item>
         <item name="android:textColor">@color/titleColor</item>
         <item name="android:layout_alignParentTop">true</item>
@@ -130,7 +126,6 @@
         <item name="android:layout_height">@dimen/logo_length</item>
         <item name="android:layout_marginRight">12dp</item>
         <item name="android:layout_gravity">left</item>
-        <item name="android:contentDescription">@string/description</item>
     </style>
 
     <style name="Spinner">

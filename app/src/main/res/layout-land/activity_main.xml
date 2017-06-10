@@ -5,14 +5,16 @@
     android:id="@+id/activity_main"
     tools:context="com.example.android.courtcounter.MainActivity">
 
-    <TextView style="@style/TitleLand"
+    <TextView
+        style="@style/TitleLand"
         android:id="@+id/heading"
-        android:text="@string/title"/>
+        android:text="@string/title" />
 
     <include layout="@layout/reset_button" />
 
     <!--Wrapped in a scrollview to ensure no items are lost of screen in landscape mode-->
-    <ScrollView style="@style/Scroller"
+    <ScrollView
+        style="@style/Scroller"
         android:id="@+id/scroller">
 
         <!--Nesting horizontal layout which holds but vertical layouts containing team names,
@@ -22,9 +24,9 @@
             android:layout_width="match_parent"
             android:orientation="vertical">
 
-            <include layout="@layout/team_a_display_land" />
+            <include layout="@layout/team_a_display" />
 
-            <include layout="@layout/team_b_display_land" />
+            <include layout="@layout/team_b_display" />
         </LinearLayout>
 
     </ScrollView>

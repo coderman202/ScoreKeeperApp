@@ -8,7 +8,7 @@
 
     <Spinner
         style="@style/Spinner"
-        android:id="@+id/selector_b"/>
+        android:id="@+id/selector_b" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,8 @@
 
         <ImageView
             style="@style/Logo"
-            android:id="@+id/logo_b"/>
+            android:id="@+id/logo_b"
+            android:contentDescription="@string/logo_description" />
 
         <TextView
             style="@style/ScoreView"

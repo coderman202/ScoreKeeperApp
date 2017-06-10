@@ -5,14 +5,16 @@
     android:id="@+id/activity_main"
     tools:context="com.example.android.courtcounter.MainActivity">
 
-    <TextView style="@style/Title"
+    <TextView
+        style="@style/Title"
         android:id="@+id/heading"
-        android:text="@string/title"/>
+        android:text="@string/title" />
 
     <include layout="@layout/reset_button" />
 
     <!--Wrapped in a scrollview to ensure no items are lost of screen in landscape mode-->
-    <ScrollView style="@style/Scroller"
+    <ScrollView
+        style="@style/Scroller"
         android:id="@+id/scroller">
 
         <!--Horizontal Linear Layout which contains the layout files for both team a and b-->
