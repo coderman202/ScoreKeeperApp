@@ -165,7 +165,11 @@ public class MainActivity extends AppCompatActivity {
         logoB.setImageResource(teamLogos[spinnerB.getSelectedItemPosition()]);
     }
 
-    //Array of references to drawable team logos
+    /*
+     * Below is an array of references to drawable team logos.
+     * All logos were taken from:
+     * @see <a href="https://hdlogo.wordpress.com/2016/02/17/nba-hd-logos-2015-16/">HD NBA Logos</a>
+     */
     private final Integer[] teamLogos = {
             R.drawable.logo1, R.drawable.logo2, R.drawable.logo3, R.drawable.logo4,
             R.drawable.logo5, R.drawable.logo6, R.drawable.logo7, R.drawable.logo8,
