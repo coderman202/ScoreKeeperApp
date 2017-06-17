@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
     //Initialise ints to track team scores and TextViews to display them.
     private int scoreA = 0;
     private int scoreB = 0;
-    private TextView scoreViewA, scoreViewB;
+    private TextView scoreViewA;
+    private TextView scoreViewB;
 
     /***
      * Lawler's Law tracker. Lawler's Law is a term first introduced by Los Angeles Clippers
@@ -26,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Initialise ImageViews to display selected team's logo
-    private ImageView logoA, logoB;
+    private ImageView logoA;
+    private ImageView logoB;
 
     //States for recalling scores on restore
     private static final String STATE_SCORE_A = "ScoreTeamA";
@@ -46,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
     };
 
     //Initialise the Spinners to display all the teams for selection.
-    private Spinner spinnerA, spinnerB;
+    private Spinner spinnerA;
+    private Spinner spinnerB;
 
 
     @Override
