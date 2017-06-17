@@ -8,7 +8,7 @@
     <dimen name="title_size">20sp</dimen>
     <dimen name="score_padding">5dp</dimen>
     <dimen name="score_margin_left">18dp</dimen>
-    <dimen name="score_size">35sp</dimen>
+    <dimen name="score_size">25sp</dimen>
     <dimen name="title_padding_left">50dp</dimen>
 
     <!--Button dimens-->

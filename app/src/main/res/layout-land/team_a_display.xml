@@ -28,7 +28,7 @@
                 android:contentDescription="@string/logo_description" />
 
             <TextView
-                style="@style/ScoreViewLand"
+                style="@style/ScoreView"
                 android:id="@+id/score_a" />
 
         </LinearLayout>

@@ -78,10 +78,6 @@
         <item name="android:textColor">@color/buttonTextColor</item>
     </style>
 
-    <style name="ScoreViewLand" parent="ScoreView">
-        <item name="android:background">@drawable/borderwhite</item>
-    </style>
-
     <!--For the title, indicating which sport you are tracking the scores in.-->
     <style name="Title" parent="TextView">
         <item name="android:paddingLeft">@dimen/title_padding_left</item>
